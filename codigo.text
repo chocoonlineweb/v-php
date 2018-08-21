@@ -1,0 +1,47 @@
+@if(!Auth::check())
+    <form class="card">
+        <a class="icon-user"><i class=" material-icons left">person</i></a>
+        <div class="row">
+            <center >
+              <h5 class="purple-text">BIENVENIDO</h5>
+              <p class="center grey-text">SOCIAL LOGIN</p>
+              <h6 class="grey-text darken-4">Inicia sesión con tu rede social favorita </h6>
+            </center>
+        </div>
+        <div class="row">
+           <div class="btn-social col s12 m12">
+             <a href="{{URL('login/facebook')}}" class="btn light-blue darken-4 waves-effect waves-light not-border-shadow col s12">
+               <img src="{{URL('img/icons/icon-facebook.png')}}" alt="">Facebook</a>
+           </div>
+           <div class="btn-social col s12 m12">
+            <a href="{{URL('login/twitter')}}" class="btn light-blue accent-2 waves-effect waves-light not-border-shadow col s12">
+              <img src="{{URL('img/icons/icon-twitter.png')}}" alt="">Twitter</a>
+           </div>
+           <div class="btn-social col s12 m12">
+            <a href="{{URL('login/google')}}" class="btn red darken-4 waves-effect waves-light not-border-shadow col s12">
+              <img src="{{URL('img/icons/icon-google.png')}}" alt="">Google</a>
+           </div>
+        </div>
+	</form>
+  <style media="screen">
+  .icon-user {
+    width: 100px !important;
+    height: 100px !important;
+    top: 10px !important;
+    background: purple !important;
+    left: calc(165px - 50px) !important;
+    margin-bottom: 20px;
+  }
+  .icon-user > i {
+    font-size: 100px !important;
+    margin: calc(50% - 50px) !important;
+    color: white !important;
+  }
+  .btn-social a img{
+    width: 35px;
+    float: left;
+  }
+  </style>
+@else
+
+@endif
